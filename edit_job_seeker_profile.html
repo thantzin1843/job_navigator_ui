@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Navigator</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"  rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+            
+               extend:{
+                screens: {
+                'sm': '390px',   
+                'md': '876px' 
+                },
+               }
+            
+          }
+            
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/profile.css">
+</head>
+<body>
+    <!-- <div class="w-full p-5 bg-primary text-white">
+        <i class="fa-solid fa-arrow-left"></i>&nbsp;Back
+    </div> -->
+
+    <div class="w-full">
+        <div class="md:w-1/2 sm:w-5/6 mx-auto bg-[#E6E6FA] my-10 md:px-[50px] sm:px-[20px] pt-[10px] pb-[50px] shadow-sm shadow-black  rounded-xl">
+            <div class="text-sm"><i class="fa-solid fa-arrow-left"></i>&nbsp;Profile</div>
+            <div class="text-2xl mt-3 font-semibold">Edit Profile</div>
+
+            <div class=" flex items-center flex-wrap md:justify-between sm:justify-center md:my-5 sm:my-3">
+                <div class="w-[150px] h-[150px] rounded-full overflow-hidden ">
+                    <img src="https://img.freepik.com/free-photo/colorful-design-with-spiral-design_188544-9588.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1722729600&semt=sph" class="w-full h-full">
+                </div>
+                <div class="sm:mt-3">
+                    <button class="border-2 border-[#7905EE] bg-[#7905EE] px-5 py-2 rounded-sm text-white">Change Picture</button>
+                    <button class="border-2 border-red-500 bg-gray-200 text-red-500 px-5 py-2 rounded-sm text-black">Delete Picture</button>
+                </div>
+            </div>
+
+            <form action="" class="mt-[50px]">
+                
+                <div class="flex gap-3 items-center mb-3">
+                    <label for="" class="text-md font-bold w-1/5">Age:</label>
+                    <input type="text" name="" id="" class="w-4/5 px-3 py-1 rounded-md">
+                </div>
+
+                <div class="flex gap-3 items-center mb-3">
+                    <label for="" class="text-md font-bold w-1/5">Age:</label>
+                    <input type="number" name="" id="" class="w-4/5 px-3 py-1 rounded-md">
+                </div>
+
+                <div class="flex gap-3 items-center mb-3">
+                    <label for="" class="text-md font-bold w-1/5">Email:</label>
+                    <input type="email" name="" id="" class="w-4/5 px-3 py-1 rounded-md">
+                </div>
+
+                <div class="flex gap-3 items-center mb-3">
+                    <label for="" class="text-md font-bold w-1/5">Address:</label>
+                    <input type="text" name="" id="" class="w-4/5 px-3 py-1 rounded-md">
+                </div>
+
+                <div class="flex gap-3 items-center mb-3">
+                    <label for="" class="text-md font-bold w-1/5">Phone:</label>
+                    <input type="text" name="" id="" class="w-4/5 px-3 py-1 rounded-md">
+                </div>
+
+                <div class="flex gap-3 items-center mb-3">
+                    <label for="" class="text-md font-bold w-1/5">Bio:</label>
+                    <textarea name="" class="w-4/5 px-3 py-1 rounded-md" id="">
+
+                    </textarea>
+                </div>
+
+                <div class="mt-10 flex justify-end gap-3">
+                    
+                    <button class="shadow-lg  bg-[#9696E8] px-5 py-2 rounded-sm text-white">Cancel</button>
+                    <button class="shadow-lg  bg-[#9696E8] px-5 py-2 rounded-sm text-white">Save Changes</button>
+                </div>
+            </form>
+           
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+</body>
+</html>
