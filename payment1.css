@@ -1,0 +1,113 @@
+@media (max-width: 850px){
+    .container{
+        min-width:800px;
+    }
+}
+
+@media (max-width: 700px){
+  .container{
+      min-width:600px;
+  }
+}
+
+.qr_part{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+     margin:30px 0px 30px 0px;
+}
+
+.drag-area{
+    border: 2px dashed #fff;
+    /* min-height: 200px;
+    min-width: 230px; */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top:30px;
+    padding:2px;
+    
+  }
+  .drag-area.active{
+    border: 2px solid #fff;
+  }
+  .drag-area .icon{
+    font-size: 30px;
+    color: #fff;
+  }
+  .drag-area header{
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+  }
+  .drag-area span{
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    margin: 10px 0 15px 0;
+  }
+  .drag-area button{
+    padding: 8px 20px;
+    font-size: 15px;
+    font-weight: 450;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #5256ad;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  
+  .drag-area button:hover{
+    background: rgb(228, 220, 220);
+  }
+  
+  .drag-area img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+  
+  .btns{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    margin:20px 150px 20px 150px;
+    
+  }
+  .last_btn{
+    margin:20px 0px 20px 0px;
+  }
+  
+.section-with-background {
+    height:auto;
+ }
+  
+ 
+ 
+ @media (max-width: 800px){
+  .pay-img{
+    min-height: 200px;
+    min-width: 230px;
+  }
+ .drag-area{
+    min-height: 200px;
+    min-width: 230px;
+ }
+ 
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.disabled-background {
+  pointer-events: none;
+  filter: blur(5px);
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Navigator</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+               extend:{
+                  width: {
+                  'custom-xsm': '3rem',
+                  'custom-sm': '8rem', 
+                  'custom-md': '12rem', 
+                  'custom-lg': '16rem', 
+                  'custom-xl': '20rem', 
+                  },
+                  height: {
+                  'custom-xsm': '3rem',
+                  'custom-sm': '8rem', 
+                  'custom-md': '12rem', 
+                  'custom-lg': '16rem', 
+                  'custom-xl': '20rem', 
+                  },
+                  screens: {
+                  'sm': '640px',
+                  'md': '768px',
+                  'lg': '1024px',
+                  'xl': '1280px',
+                  '2xl': '1536px',
+                  },
+                },
+               fontFamily: {
+                cabin: ['Cabin', 'sans-serif'],
+               },
+          }
+            
+        }
+    </script>
+    
+      </style>
+      <link href="./payment1.css" rel="stylesheet"/>
+      <!--cabin font-->
+      <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+      <!--icons-->      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+      <style>
+        .titile_top{ color:7905EE;}
+      </style>
+   
+   
+</head>
+<body class="font-cabin"> 
+    <div class="container max-w-screen-xl mx-auto p-8">
+      <div class="px-4 w-full h-full ">
+        <a href="job_search.html">
+            <h6 class="text-base font-medium"> 
+            <i class="fa-solid fa-arrow-left"> </i>Back</h6>
+        </a>
+      </div>
+      <div class="wrapper w-full h-full p-10">
+          
+            <div class="grid grid-cols-2 gap-20">
+
+              <div class="content-start">
+                  <h1 class="text-xl font-bold">Senior UI/UX Designer</h1>                  
+                    <h5 class="text-base mt-2">
+                      <i class="fa-solid fa-briefcase"></i>&nbsp; Apex Focus Group Inc.
+                      <span id="company_pf" class="ml-2 text-xs bg-[#9696E8] rounded-xl py-0.5 px-4 underline font-semibold cursor-pointer"> View Company Profile</span>                  
+                    </h5>                 
+              </div>
+
+              <div class="grid justify-self-end ">
+                  <p class="text-gray-600 text-base text-right">Posted 29 July 2024</p>
+                  <div class="flex flex-row justify-between gap-4 mt-2">
+                    <button class="bg-[#7905EE] rounded-lg py-1.5 px-5 text-white font-semibold">Apply Job</button>
+                    <button class="border-2 border-black rounded-lg py-1.5 px-3"><i class="fa-solid fa-heart"></i></button>
+                  </div>
+              </div>
+
+            </div>
+            <div class="border-b border-gray-400 mt-5"></div>
+
+            <div class="mt-4">
+              <h3 class="text-lg font-semibold">Job Details</h3>
+              <div class="w-1/2 flex flex-cols flex-wrap justify-between gap-2 mt-5" >
+                <div class="content-start">
+                  <div class="flex flex-row flew-nowrap">
+                    <img src="proj pic/icons/salary.png" class="w-7 h-7"> <h6 class="font-semibold">&nbsp;Salary : </h6>&nbsp;<p class="bg-[#C1DCEB] p-0.5 rounded-sm text-center">40$/hr </p>
+                  </div> <br/>
+
+                  <div class="flex flex-row flew-nowrap">
+                    <img src="proj pic/icons/job_type.png" class="w-7 h-7"> <h6 class="font-semibold">&nbsp;Job Type : </h6>&nbsp;<p class="bg-[#C1DCEB] p-0.5 rounded-sm text-center">Full Time</p>
+                  </div>
+
+                </div>
+                <div class="content-end mt-2">
+                  <div class="flex flex-row flew-nowrap">
+                    <img src="proj pic/icons/encourage.png" class="w-7 h-7"> <h6 class="font-semibold">&nbsp;Encourage to Apply : </h6>&nbsp;<p class="bg-[#C1DCEB] p-0.5 rounded-sm text-center">Fair Chance</p>
+                  </div> <br/>
+
+                  <div class="flex flex-row flew-nowrap">
+                    <img src="proj pic/icons/work_type.png" class="w-7 h-7"> <h6 class="font-semibold">&nbsp;Work Type : </h6>&nbsp;<p class="bg-[#C1DCEB] p-0.5 rounded-sm text-center">On-site</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-b border-gray-400 mt-5"></div>
+
+            <div class="mt-4">
+              <h3 class="text-lg font-semibold">Requirements</h3>
+              <div class="flex flex-row flew-nowrap mt-5">
+                <img src="proj pic/icons/skills.png" class="w-7 h-7"> <h6 class="font-semibold">&nbsp;Skills : </h6>                
+              </div>
+              <div class="flex flex-row flex-wrap mt-1 gap-3 mt-2">
+                <p class="bg-[#C1C1EB] px-3 py-0.5 rounded-lg text-center">Prototyping</p>
+                <p class="bg-[#C1C1EB] px-3 py-0.5 rounded-lg text-center">UI</p>
+                <p class="bg-[#C1C1EB] px-3 py-0.5 rounded-lg text-center">UX</p>
+              </div>
+
+              <div class="flex flex-row flew-nowrap mt-5">
+                <img src="proj pic/icons/education.png" class="w-8 h-7"> <h6 class="font-semibold">&nbsp;Education : </h6>                
+              </div>
+              <div class="flex flex-row flex-wrap mt-1 gap-3 mt-2">
+                <p class="bg-[#DAD6D6] px-3 py-1.5 rounded-lg text-center">Graduated</p>
+                <p class="bg-[#DAD6D6] px-3 py-1.5 rounded-lg text-center">Bachelor’s degree</p>               
+              </div>
+            </div>
+
+            <div class="border-b border-gray-400 mt-5"></div>
+
+            <div class="mt-4">
+              <h3 class="text-lg font-semibold">Location</h3>
+              <p>No.314 Hlaing Yangon, Myanmar </p>
+            </div>
+
+
+            <div class="border-b border-gray-400 mt-5"></div>
+
+          
+            <div class="mt-4">
+              <h3 class="text-lg font-semibold">Full Job Description</h3>
+              <div class="flex flex-wrap mt-5 p-3">
+                    <h6>Job Summary: </h6>
+                    <p>The HPE Cray Message Passing Toolkit team is seeking a Software Development Engineer to lead the development efforts on scalable communication libraries (MPI and OpenSHMEM) supporting our HPE Supercomputing interconnect fabric. This position will provide an opportunity to set the direction of the scalable communication libraries in the HPE Cray programming environment software stack.
+                    This position can be remote.</p>
+
+                    <h6>About the Job:</h6>
+                    <p>Design, develop, debug, and tune parallel programming models like MPI and OpenSHMEM
+                    Evaluate multiple parallel programming solutions in exploiting various hardware technologies like next-generation HPC interconnects, CPUs, and GPUs
+                    Participate in MPI and OpenSHMEM standards committees to lead discussions on introducing new features in high-level parallel programming models
+                    Propose improvements for next-generation software and hardware
+                    Ability to work independently
+                    Interact and support customer engagements</p>
+
+                    <h6>>About You:</h6>
+                    <p>Familiarity in multiple high level parallel programming models, such as, MPI, OpenSHMEM, UPC, Global Arrays, and/or Coarray Fortran in a Linux environment
+                    Knowledge on general HPC components like compute, network, memory, and storage
+                    An understanding of high-performance computing
+                    BS in Computer Science or equivalent
+                    Willingness to work on multiple projects
+                    Good communication skills</p>
+
+                    <h6>Preferred:</h6>
+                    <p>Experience with parallel programming styles specifically PGAS and RMA
+                    Experience in using network library interfaces like libfabric, UCX, and/or Verbs
+                    Ability to do performance analysis at scale
+                    MS, or PhD in Computer Science or equivalent</p>
+
+                    <h6>Additional Skills:</h6>
+                    Cloud Architectures, Cross Domain Knowledge, Design Thinking, Development Fundamentals, DevOps, Distributed Computing, Micro-services Fluency, Full Stack Development, Security-First Mindset, Solutions Design, Testing & Automation, User Experience (UX)
+
+                    <h6>What We Can Offer You:</h6>
+                    <p>Health & Well-being
+                    We strive to provide our team members and their loved ones with a comprehensive suite of benefits that supports their physical, financial and emotional well-being.</p>
+              </div>
+            </div>
+
+            <div class="border-b border-gray-400 mt-5"></div>
+
+
+            <div class="buttons flex flex-row justify-end flex-end mt-4 gap-4">
+                
+                <button class="bg-[#D9D9D9] px-5 py-2 rounded text-black font-semibold">Back</button>
+                <button class="bg-[#7905EE] px-5 py-2 rounded text-white font-semibold">Apply</button>
+
+            </div>
+            
+            
+            
+         
+      </div>
+   
+        
+    </div>
+        
+    
+
+</body>
+</html>
