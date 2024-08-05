@@ -33,20 +33,20 @@
     <link rel="stylesheet" href="/profile.css">
 </head>
 <body>
-    <div class="w-full p-5 bg-primary text-white">
+    <!-- <div class="w-full p-5 bg-primary text-white">
         <i class="fa-solid fa-arrow-left"></i>&nbsp;Back
-    </div>
+    </div> -->
 
     <div class="w-full">
         <div class="w-1/2 mx-auto bg-gray my-5 px-[50px] py-[10px] shadow-sm shadow-black  rounded-xl">
-            <div class="text-sm">Profile</div>
+            <div class="text-sm"><i class="fa-solid fa-arrow-left"></i>&nbsp;Profile</div>
             <div class="text-2xl mt-3 font-semibold">Qualifications</div>
             <div class="text-gray-500 text-sm">We use these details to show you jobs that match your skills and experience</div>
 
             <!-- Education -->
             <div id="accordion-collapse" data-accordion="collapse" class="rounded-lg overflow-hidden">
                 <div id="accordion-collapse-heading-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3" class="border-t border-t-black mt-5 py-6 px-10 text-xl font-semibold flex justify-between items-center">
-                    Add Education<i class="fa-solid fa-angle-down"></i>
+                    <div><i class="fa-solid fa-graduation-cap text-3xl"></i>&nbsp;&nbsp;&nbsp;Add Education</div><i class="fa-solid fa-angle-down"></i>
                 </div>
                 <div id="accordion-collapse-body-3" class="hidden " aria-labelledby="accordion-collapse-heading-3">
                   <div class="p-5 border border-t-0  dark:border-gray-700">
@@ -136,7 +136,7 @@
 
             <div id="accordion-collapse1" data-accordion="collapse" class=" rounded-lg overflow-hidden">
                 <div id="accordion-collapse-heading-4" data-accordion-target="#accordion-collapse-body-4" aria-expanded="false" aria-controls="accordion-collapse-body-4" class="border-t border-t-black  py-6 px-10 text-xl font-semibold flex justify-between items-center">
-                    Add Languages<i class="fa-solid fa-angle-down"></i>
+                    <div><i class="fa-solid fa-language text-3xl"></i>&nbsp;&nbsp;&nbsp;Add Language</div><i class="fa-solid fa-angle-down"></i>
                 </div>
                 <div id="accordion-collapse-body-4" class="hidden " aria-labelledby="accordion-collapse-heading-4">
                   <div class="p-5 border border-t-0  dark:border-gray-700">
@@ -213,7 +213,7 @@
 
             <div id="accordion-collapse2" data-accordion="collapse" class=" rounded-lg overflow-hidden">
                 <div id="accordion-collapse-heading-5" data-accordion-target="#accordion-collapse-body-5" aria-expanded="false" aria-controls="accordion-collapse-body-5" class="border-t border-t-black  py-6 px-10 text-xl font-semibold flex justify-between items-center">
-                    Add skills<i class="fa-solid fa-angle-down"></i>
+                    <div><i class="fa-solid fa-award text-3xl"></i>&nbsp;&nbsp;&nbsp;Add Skills</div><i class="fa-solid fa-angle-down"></i>
                 </div>
                 <div id="accordion-collapse-body-5" class="hidden " aria-labelledby="accordion-collapse-heading-5">
                   <div class="p-5 border border-t-0  dark:border-gray-700">
@@ -275,15 +275,247 @@
 
             <!-- Certificates -->
             
-            <div class="border-t border-t-black py-6 px-10 text-xl font-semibold flex justify-between items-center">
-                Add Certificates<i class="fa-solid fa-plus"></i>
+            <div id="accordion-collapse3" data-accordion="collapse" class=" rounded-lg overflow-hidden">
+                <div id="accordion-collapse-heading-6" data-accordion-target="#accordion-collapse-body-6" aria-expanded="false" aria-controls="accordion-collapse-body-6" class="border-t border-t-black  py-6 px-10 text-xl font-semibold flex justify-between items-center">
+                    <div class="flex"><img src="/img/certificate-removebg-preview.png" class="w-[30px]" alt="">&nbsp;&nbsp;&nbsp;Add Certificates</div><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div id="accordion-collapse-body-6" class="hidden " aria-labelledby="accordion-collapse-heading-6">
+                  <div class="p-5 border border-t-0  dark:border-gray-700">
+                    <!-- modal  -->
+                        
+                        <div class="w-full flex justify-end">
+                            <button data-modal-target="default-modal3" data-modal-toggle="default-modal3" class="text-white shadow-lg bg-[#9696E8] p-2 rounded-md text-sm" type="button">
+                                Add Certificates <i class="fa-solid fa-plus"></i>
+                                </button>
+                              
+                              <!-- Main modal -->
+                              <div id="default-modal3" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                                  <div class="relative p-4 w-full max-w-2xl max-h-full">
+                                      <!-- Modal content -->
+                                      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                          <!-- Modal header -->
+                                          <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                                  Add Certificates to Your Profile
+                                              </h3>
+                                              <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal3">
+                                                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                                  </svg>
+                                                  <span class="sr-only">Close modal</span>
+                                              </button>
+                                          </div>
+                                          <!-- Modal body -->
+                                          <div class="p-5">
+                                            <form action="">
+                                                <div class="mb-3">
+                                                    <label for="">Certificate</label>
+                                                    <input type="text" name="" class="px-3 py-2 border-2 border-[#9696E8] rounded-md block w-full mt-2" placeholder="Enter university name" id="">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="">Certificate PDF/Image</label>
+                                                    <input type="file" name="" class="px-3 py-2 border-2 border-[#9696E8] rounded-md block w-full mt-2" placeholder="Enter university name" id="">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="">About</label>
+                                                    <textarea type="text" name="" class="px-3 py-2 border-2 border-[#9696E8] rounded-md block w-full mt-2" placeholder="Enter university name" id=""></textarea>
+                                                </div>
+                                                <button class="px-3 py-2 bg-purple-600 w-full text-center text-white rounded-md shadow-lg">Add Now</button>
+                                            </form>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                                                <!-- end of modal -->
+                        </div>
+<!-- Modal toggle -->
+  
+<div>
+    <div class="flex gap-5 items-center my-2">
+        <div class="w-[100px] h-[100px] bg-[#9696E8]  mt-1">
+            <img src="/img/viber_image_2024-07-16_21-47-34-445.png" class="w-full h-full " alt="">
+        </div>
+        <div>
+          <div class="font-bold">ITPEC</div>
+          <div class="text-gray-500">IT professional course exam</div>
+        </div>
+      </div>
+      <hr>
+</div>
+
+                  </div>
+                </div>
             </div>
-            <div class="border-t border-t-black py-6 px-10 text-xl font-semibold flex justify-between items-center">
-                Add Work Experience<i class="fa-solid fa-plus"></i>
+
+            <!-- Work experience -->
+            <div id="accordion-collapse4" data-accordion="collapse" class="rounded-lg overflow-hidden">
+                <div id="accordion-collapse-heading-9" data-accordion-target="#accordion-collapse-body-9" aria-expanded="false" aria-controls="accordion-collapse-body-9" class="border-t border-t-black py-6 px-10 text-xl font-semibold flex justify-between items-center">
+                    <div><i class="fa-solid fa-briefcase text-3xl"></i>&nbsp;&nbsp;&nbsp;Add Work Experience</div><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div id="accordion-collapse-body-9" class="hidden " aria-labelledby="accordion-collapse-heading-9">
+                  <div class="p-5 border border-t-0  dark:border-gray-700">
+                    <!-- modal  -->
+                        
+                        <div class="w-full flex justify-end">
+                            <button data-modal-target="default-modal9" data-modal-toggle="default-modal9" class="text-white shadow-lg bg-[#9696E8] p-2 rounded-md text-sm" type="button">
+                                Add Work Experience <i class="fa-solid fa-plus"></i>
+                                </button>
+                              
+                              <!-- Main modal -->
+                              <div id="default-modal9" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                                  <div class="relative p-4 w-full max-w-2xl max-h-full">
+                                      <!-- Modal content -->
+                                      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                          <!-- Modal header -->
+                                          <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                                  Add Work Experience to Your Profile
+                                              </h3>
+                                              <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal9">
+                                                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                                  </svg>
+                                                  <span class="sr-only">Close modal</span>
+                                              </button>
+                                          </div>
+                                          <!-- Modal body -->
+                                          <div class="p-5">
+                                            <form action="">
+                                                <div class="mb-3">
+                                                    <label for="">Company Name</label>
+                                                    <input type="text" name="" class="px-3 py-2 border-2 border-[#9696E8] rounded-md block w-full mt-2" placeholder="Enter company name" id="">
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="">Position</label>
+                                                    <input type="text" name="" class="px-3 py-2 border-2 border-[#9696E8] rounded-md block w-full mt-2" placeholder="Enter position" id="">
+                                                </div>
+
+                                                <div class="flex gap-2 w-full">
+                                                    <div class="mb-3 w-1/2">
+                                                        <label for="">From</label>
+                                                        <input type="date" name="" class="px-3 py-2 border-2 border-[#9696E8] rounded-md block w-full mt-2"  id="">
+                                                    </div>
+    
+                                                    <div class="mb-3 w-1/2">
+                                                        <label for="">To</label>
+                                                        <input type="date" name="" class="px-3 py-2 border-2 border-[#9696E8] rounded-md block w-full mt-2" id="">
+                                                    </div>
+                                                </div>
+                                                <button class="px-3 py-2 bg-purple-600 w-full text-center text-white rounded-md shadow-lg">Add Now</button>
+                                            </form>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                                                <!-- end of modal -->
+                        </div>
+<!-- Modal toggle -->
+  
+                  <div class="flex gap-5  my-2">
+                    <div class="w-4 h-4 bg-[#9696E8] rounded-full mt-1"></div>
+                    <div>
+                      <div class="font-bold">Company Name</div>
+                      <div class="text-[#8035FB]">Position</div>
+                      <div class="text-gray-500">2018 December - Present</div>
+                    </div>
+                  </div>
+                  <hr>
+                  <hr>
+                  </div>
+                </div>
             </div>
-            <div class="border-t border-t-black py-6 px-10 text-xl font-semibold flex justify-between items-center">
-                Add Projects/Accomplishments<i class="fa-solid fa-plus"></i>
+
+            <!-- Addd projects / accomplishment -->
+         
+            <div id="accordion-collapse5" data-accordion="collapse" class=" rounded-lg overflow-hidden">
+                <div id="accordion-collapse-heading-11" data-accordion-target="#accordion-collapse-body-11" aria-expanded="false" aria-controls="accordion-collapse-body-11" class="border-t border-t-black  py-6 px-10 text-xl font-semibold flex justify-between items-center">
+                    <div><i class="fa-regular fa-clipboard text-3xl"></i>&nbsp;&nbsp;&nbsp;Add Projects</div><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div id="accordion-collapse-body-11" class="hidden " aria-labelledby="accordion-collapse-heading-11">
+                  <div class="p-5 border border-t-0  dark:border-gray-700">
+                    <!-- modal  -->
+                        
+                        <div class="w-full flex justify-end">
+                            <button data-modal-target="default-modal11" data-modal-toggle="default-modal11" class="text-white shadow-lg bg-[#9696E8] p-2 rounded-md text-sm" type="button">
+                                Add Projectss <i class="fa-solid fa-plus"></i>
+                                </button>
+                              
+                              <!-- Main modal -->
+                              <div id="default-modal11" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                                  <div class="relative p-4 w-full max-w-2xl max-h-full">
+                                      <!-- Modal content -->
+                                      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                          <!-- Modal header -->
+                                          <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                                  Add Projectss to Your Profile
+                                              </h3>
+                                              <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal11">
+                                                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                                  </svg>
+                                                  <span class="sr-only">Close modal</span>
+                                              </button>
+                                          </div>
+                                          <!-- Modal body -->
+                                          <div class="p-5">
+                                            <form action="">
+                                                <div class="mb-3">
+                                                    <label for="">Project Name</label>
+                                                    <input type="text" name="" class="px-3 py-2 border-2 border-[#9696E8] rounded-md block w-full mt-2" placeholder="Enter project name" id="">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="">Media</label>
+                                                    <input type="file" name="" class="px-3 py-2 border-2 border-[#9696E8] rounded-md block w-full mt-2"  id="">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="">Description</label>
+                                                    <textarea type="text" name="" class="px-3 py-2 border-2 border-[#9696E8] rounded-md block w-full mt-2" id=""></textarea>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="">Contributors</label>
+                                                    <input type="text" name="" class="px-3 py-2 border-2 border-[#9696E8] rounded-md block w-full mt-2" placeholder="Enter Contributors' name" id="">
+                                                </div>
+                                                <button class="px-3 py-2 bg-purple-600 w-full text-center text-white rounded-md shadow-lg">Add Now</button>
+                                            </form>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                                                <!-- end of modal -->
+                        </div>
+<!-- Modal toggle -->
+  
+                    <div>
+                        <div class="flex gap-5 items-center my-2">
+                            <div class="w-1/2 flex flex-wrap">
+                                    <img src="/img/viber_image_2024-07-16_21-47-34-445.png" class="w-1/2 h-[100px]  shadow-lg" alt="">
+                                    <img src="/img/viber_image_2024-07-16_21-47-34-445.png" class="w-1/2 h-[100px]  shadow-lg" alt="">
+                                    <img src="/img/viber_image_2024-07-16_21-47-34-445.png" class="w-1/2 h-[100px] shadow-lg " alt="">
+                                    <img src="/img/viber_image_2024-07-16_21-47-34-445.png" class="w-1/2 h-[100px] shadow-lg " alt="">
+                            </div>
+                            <div class="w-1/2">
+                            <div class="font-bold">Project name</div>
+                            <div class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem velit corporis tenetur dolor error magnam doloremque. Temporibus nemo ut</div>
+                            <div>
+                                <h3 class="font-bold mt-2 text-lg">Contributors</h3>
+                                <div>Thant Zin Win , Lin Lett Win, Yin Mon Win, Lin Lett Shwe Yi Khin</div>
+                            </div>
+                        
+                        </div>
+                        </div>
+                        <hr class="h-[1px] bg-black">
+                    </div>
+
+                  </div>
+                </div>
             </div>
+
+            <!-- end of projects -->
            
         </div>
     </div>

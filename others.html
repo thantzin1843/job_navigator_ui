@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Navigator</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"  rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+            
+               extend:{
+                screens: {
+                'sm': '390px',   
+                'md': '876px' 
+                },
+               }
+            
+          }
+            
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/profile.css">
+</head>
+<body>
+    <!-- <div class="w-full p-5 bg-primary text-white">
+        <i class="fa-solid fa-arrow-left"></i>&nbsp;Back
+    </div> -->
+
+    <div class="w-full">
+        <div class="w-1/2 mx-auto bg-gray my-5 px-[50px] py-[10px] shadow-sm shadow-black  rounded-xl min-h-[400px]">
+            <div class="text-sm"><i class="fa-solid fa-arrow-left"></i>&nbsp;Profile</div>
+            <div class="text-2xl mt-3 font-semibold">Others</div>
+            <div class="text-gray-500 text-sm">Sharing social media accounts and other informations to know more about you.</div>
+
+            <!-- Education -->
+          
+            <!-- Languages -->
+
+            <div id="accordion-collapse1" data-accordion="collapse" class=" rounded-lg overflow-hidden">
+                <div id="accordion-collapse-heading-4" data-accordion-target="#accordion-collapse-body-4" aria-expanded="false" aria-controls="accordion-collapse-body-4" class="border-t border-t-black border-b border-b-black  py-6 px-10 mt-10 text-xl font-semibold flex justify-between items-center">
+                    <div class="flex items-center"><img src="/img/4187236.png" class="w-[40px]" alt="">&nbsp;&nbsp;&nbsp;Add Social Media Accounts</div><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div id="accordion-collapse-body-4" class="hidden " aria-labelledby="accordion-collapse-heading-4">
+                  <div class="p-5 border border-t-0  dark:border-gray-700">
+                    <!-- modal  -->
+                        
+                        <div class="w-full flex justify-end">
+                            <button data-modal-target="default-modal1" data-modal-toggle="default-modal1" class="text-white shadow-lg bg-[#9696E8] p-2 rounded-md text-sm" type="button">
+                                <i class="fa-solid fa-plus"></i>
+                                </button>
+                              
+                              <!-- Main modal -->
+                              <div id="default-modal1" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                                  <div class="relative p-4 w-full max-w-2xl max-h-full">
+                                      <!-- Modal content -->
+                                      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                          <!-- Modal header -->
+                                          <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                                  Add accounts
+                                              </h3>
+                                              <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal1">
+                                                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                                  </svg>
+                                                  <span class="sr-only">Close modal</span>
+                                              </button>
+                                          </div>
+                                          <!-- Modal body -->
+                                          <div class="p-5">
+                                            <form action="">
+                                                <div class="mb-3">
+                                                    <label for="">Accounts</label>
+                                                    <input type="text" name="" class="px-3 py-2 border-2 border-[#9696E8] rounded-md block w-full mt-2" placeholder="Enter account" id="">
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="">Link</label>
+                                                    <input type="text" name="" class="px-3 py-2 border-2 border-[#9696E8] rounded-md block w-full mt-2" placeholder="Enter account link" id="">
+                                                </div>
+
+                                                <button class="px-3 py-2 bg-purple-600 w-full text-center text-white rounded-md shadow-lg">Add Now</button>
+                                            </form>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                                                <!-- end of modal -->
+                        </div>
+<!-- Modal toggle -->
+  
+                  <div class="flex gap-5  my-2">
+                    <div class="w-4 h-4 bg-[#9696E8] rounded-full mt-1"></div>
+                    <div>
+                      <div class="font-bold">Facebook</div>
+                      <div class="text-[#8035FB]">http://www.facebook.com</div>
+                  
+                    </div>
+                  </div>
+                  <hr class="h-[1px] bg-black shadow-lg">
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="flex py-6 px-10 justify-between items-center">
+                <div class="text-xl font-semibold flex items-center"> 
+                    <i class="fa-solid fa-briefcase text-4xl"></i>&nbsp;&nbsp;&nbsp;Ready to work
+                </div>
+                <div>
+                    <label class="inline-flex items-center cursor-pointer">
+                        <input type="checkbox" value="" class="sr-only peer" checked>
+                        <div class="relative w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-purple-300 dark:peer-focus:ring-purple-800 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-purple-600"></div>
+                      </label>
+                </div>
+            </div>
+            
+           
+            <!-- end of projects -->
+           
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+</body>
+</html>
