@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Navigator</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+               extend:{
+                  width: {
+                  'custom-xsm': '3rem',
+                  'custom-sm': '8rem', 
+                  'custom-md': '12rem', 
+                  'custom-lg': '16rem', 
+                  'custom-xl': '20rem', 
+                  },
+                  height: {
+                  'custom-xsm': '3rem',
+                  'custom-sm': '8rem', 
+                  'custom-md': '12rem', 
+                  'custom-lg': '16rem', 
+                  'custom-xl': '20rem', 
+                  },
+                  screens: {
+                  'sm': '640px',
+                  'md': '768px',
+                  'lg': '1024px',
+                  'xl': '1280px',
+                  '2xl': '1536px',
+                  },
+                },
+               fontFamily: {
+                cabin: ['Cabin', 'sans-serif'],
+               },
+          }
+            
+        }
+    </script>
+    
+      
+      <!--cabin font-->
+      <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+      <!--icons-->      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+      <style>
+         .slider {
+            transition: transform 0.3s ease;
+        }
+        .content_text{
+            font-size:8px;
+            color:black;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        @media (max-width: 800px){
+           .noti{
+            min-width:300px;
+           }
+        }
+        .profile{
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .custom-rounded {
+            border-radius: 0.5rem; 
+        }
+        .custom-bg{
+            background-color: #E6E6FA;
+        }
+        .custom-bg1{
+            background-color: #9696E8;
+        }
+        body.dark-mode {
+            background-color: #1a202c; /* Dark background */
+            color: #f7fafc; /* Light text color */
+        }
+        .dark-mode .custom-bg {
+            background-color: #4a5568; /* Darker notification background */
+        }
+        .dark-mode .custom-bg1 {
+            background-color: #718096; /* Darker header background */
+        }
+        .dark-mode .text-black {
+            color: #f7fafc; /* Light text color */
+        }
+        .dark-mode .bg-white {
+            background-color: #2d3748; /* Darker background for points */
+        }
+        .toggle-dot {
+            transition: transform 0.3s ease;
+        }
+        input[type="checkbox"]:checked + label .toggle-dot {
+            transform: translateX(1rem); /* Move the dot */
+        }
+        
+      </style>
+   
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggle = document.getElementById('dark-mode-toggle');
+        toggle.addEventListener('change', function () {
+            document.body.classList.toggle('dark-mode', toggle.checked);
+        });
+    });
+</script>
+</head>
+<body class="font-cabin"> 
+    <div class="container max-w-screen-xl mx-auto">
+            <nav class="nav w-full h-10 sticky bg-blue-200 z-10">
+            </nav>
+            <!-- Noti part -->
+            <div class="noti float-right mr-20 custom-bg z-4 w-1/4 h-auto mt-3 rounded">
+                
+                <div class="flex flex-col items-center custom-bg1 p-6 rounded-t-lg">
+                    <div class="profile">
+                    <img src="img/27.jpg" alt="Company Image" class="w-12 h-12 rounded-full">
+                    
+                    <span class="text-black text-lg font-semibold">Felix</span>
+                    
+                    </div>
+                    
+                    
+                </div>
+                
+                    
+                        <div class="w-full h-auto p-5 mt-6 text-sm">
+                            <ul>
+                                <li class="flex items-center justify-between py-2 border-b border-gray-200">
+                                    <span class="flex items-center"><i class="fa fa-user mr-2"></i> Profile</span>
+                                    <i class="fa fa-chevron-right"></i>
+                                </li>
+                                
+                                <li class="flex items-center justify-between py-2 border-b border-gray-200">
+                                    <span class="flex items-center"><i class="fa fa-cog mr-2"></i> Settings</span>
+                                    <i class="fa fa-chevron-right"></i>
+                                </li>
+                                <li class="flex items-center justify-between py-2 border-b border-gray-200">
+                                    <span class="flex items-center"><i class="fa fa-moon mr-2"></i> Dark mode</span>
+                                    <div class="relative">
+                                        <input type="checkbox" class="hidden" id="dark-mode-toggle">
+                                        <label for="dark-mode-toggle" class="block w-10 h-6 bg-gray-300 rounded-full slider cursor-pointer">
+                                            <div class="w-4 h-4 bg-white rounded-full shadow toggle-dot absolute left-1 top-1"></div>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="flex items-center justify-between py-2 border-b border-gray-200">
+                                    <span class="flex items-center"><i class="fa fa-lock mr-2"></i> Change Password</span>
+                                    <i class="fa fa-chevron-right"></i>
+                                </li>
+                                <li class="flex items-center justify-between py-2 border-b border-gray-200">
+                                    <span class="flex items-center"><i class="fa fa-comment-dots mr-2"></i> Review Website</span>
+                                    <i class="fa fa-chevron-right"></i>
+                                </li>
+                                <li class="flex items-center justify-between py-2">
+                                    <span class="flex items-center"><i class="fa fa-sign-out-alt mr-2"></i> Logout</span>
+                                    <i class="fa fa-chevron-right"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                
+            </div>
+    </div>
+</body>
+</html>

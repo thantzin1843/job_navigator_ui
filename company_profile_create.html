@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f3f4f6;
+        }
+        .custom-bg{
+            background-color: #E6E6FA;
+        }
+        .custom-bg1{
+            background-color: #7905EE;
+        }
+        .card {
+            background-color: #fafaff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background-color: #9696E8;
+        }
+
+        .btn-danger {
+            background-color: #f56565;
+        }
+        .custom-rounded {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 0.5rem; /* Adjust this value to make the image slightly rounded */
+}
+        .form-input, .form-select {
+            border: 1px solid #000000;
+            border-radius: 0.375rem;
+            
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen p-6">
+    <div class="custom-bg p-8 rounded-lg w-full max-w-lg">
+        <h2 class="text-lg font-bold mb-4">Edit Profile</h2>
+        <div class="flex items-center mb-4 ">
+            <img src="img/hos.jpg" alt="Company Image" class="w-24 h-24 custom-rounded mb-4">
+            <div class="flex-wrap sm:flex-nowrap">
+                <button class=" text-white custom-bg1 text-xs ml-8 mb-4 font-semibold py-1 px-3 rounded-xl ">Change Picture</button>
+                <button class=" text-red-500 bg-white px-3 text-xs ml-8 py-1 font-semibold rounded-xl">Delete Picture</button>
+            </div>
+        </div>
+        <form id="profileForm">
+            <div class="mb-4 flex">
+                <label for="name" class="text-sm font-medium mr-7">Name</label>
+                <input type="text" id="name" class="form-input w-full ">
+            </div>
+            <div class="mb-4 flex">
+                <label for="industry" class=" text-sm font-medium mr-3 ">Industry</label>
+                <select id="industry" class="form-select  w-full">
+                    <option>Technology</option>
+                    
+                </select>
+            </div>
+            <div class="mb-4 flex">
+                <label for="location" class=" text-sm font-medium mr-3 ">Location</label>
+                <input type="text" id="location" class="form-input  w-full">
+            </div>
+            <div class="mb-4 flex">
+                <label for="socialMedia" class=" text-sm font-medium mr-7">Social <br> Media</label>
+                <div class="flex">
+                    <input type="text" id="socialMedia" placeholder="Paste your link" class="form-input w-full">
+                    <button type="button" class="btn-primary text-white py-1 px-3 rounded ml-2">+</button>
+                </div>
+            </div>
+            <div class="mb-4 flex">
+                <label for="slogan" class="block text-sm font-medium mr-6">Slogan</label>
+                <input type="text" id="slogan" class="form-input mt-1 block w-full">
+            </div>
+            <div class="flex ">
+                <div class="mb-4 flex">
+                    <label for="policy" class="text-sm font-medium mr-8">Policy</label>
+                    <input type="text" id="policy" class="form-input w-full">
+                </div>
+                <div class="ml-4 mb-4 flex">
+                    <label for="companySize" class="text-sm font-medium mr-4 ">Company Size</label>
+                    <input type="text" id="companySize" class="form-input w-full">
+                </div>
+            </div>
+            <div class="mb-4 flex">
+                <label for="benefits" class="text-sm font-medium mr-5">Benefits</label>
+                <div class="flex">
+                    <input type="text" id="benefits" class="form-input  w-full">
+                    <button type="button" class="btn-primary text-white py-1 px-3 rounded ml-2">+</button>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="about" class="block text-sm font-medium mb-1">About</label>
+                <textarea id="about" class="form-input mt-1 block w-full" rows="4"></textarea>
+            </div>
+            <div class="flex justify-end space-x-4">
+                <button type="button" class="btn-primary text-white py-2 px-4 rounded">Cancel</button>
+                <button type="submit" class="btn-primary text-white py-2 px-4 rounded">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

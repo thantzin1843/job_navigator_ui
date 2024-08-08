@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Navigator</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+               extend: {
+                  width: {
+                    'custom-xsm': '3rem',
+                    'custom-sm': '8rem', 
+                    'custom-md': '12rem', 
+                    'custom-lg': '16rem', 
+                    'custom-xl': '20rem', 
+                  },
+                  height: {
+                    'custom-xsm': '3rem',
+                    'custom-sm': '8rem', 
+                    'custom-md': '12rem', 
+                    'custom-lg': '16rem', 
+                    'custom-xl': '20rem', 
+                  },
+                  screens: {
+                    'sm': '640px',
+                    'md': '768px',
+                    'lg': '1024px',
+                    'xl': '1280px',
+                    '2xl': '1536px',
+                  },
+                },
+               fontFamily: {
+                cabin: ['Cabin', 'sans-serif'],
+               },
+            }
+        }
+    </script>
+    
+    <!-- Cabin font -->
+    <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        .slider {
+            transition: transform 0.3s ease;
+        }
+        .content_text {
+            font-size: 8px;
+            color: black;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        @media (max-width: 800px) {
+            .noti {
+                min-width: 300px;
+            }
+        }
+        .custom-rounded {
+            border-radius: 0.5rem; 
+        }
+        .custom-bg{
+            background-color: #E6E6FA;
+        }
+        .custom-bg1{
+            background-color: #9696E8;
+        }
+        body.dark-mode {
+            background-color: #1a202c; /* Dark background */
+            color: #f7fafc; /* Light text color */
+        }
+        .dark-mode .custom-bg {
+            background-color: #4a5568; /* Darker notification background */
+        }
+        .dark-mode .custom-bg1 {
+            background-color: #718096; /* Darker header background */
+        }
+        .dark-mode .text-black {
+            color: #f7fafc; /* Light text color */
+        }
+        .dark-mode .bg-white {
+            background-color: #2d3748; /* Darker background for points */
+        }
+        .toggle-dot {
+            transition: transform 0.3s ease;
+        }
+        input[type="checkbox"]:checked + label .toggle-dot {
+            transform: translateX(1rem); /* Move the dot */
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.getElementById('dark-mode-toggle');
+            toggle.addEventListener('change', function () {
+                document.body.classList.toggle('dark-mode', toggle.checked);
+            });
+        });
+    </script>
+</head>
+<body class="font-cabin"> 
+    <div class="container max-w-screen-xl mx-auto">
+        <nav class="nav w-full h-10 sticky bg-[#E6E6FA] z-10"></nav>
+        
+        <!-- Notification part -->
+        <div class="noti float-right mr-20 custom-bg z-4 w-1/4 h-auto mt-3 rounded">
+            <div class="flex flex-cols items-center custom-bg1 p-6 rounded-t-lg">
+                <div class="profile justify-center">
+                    <img src="img/hos.jpg" alt="Company Image" class="w-20 h-13 custom-rounded mb-0">                    
+                    <span class="text-black text-lg font-semibold">Microsoft</span>
+                    <div class="bg-white text-purple-600 rounded-full px-3 py-1 text-xs flex items-center">
+                        <svg class="w-4 h-4 text-red-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 15l-5.5 3 1.5-5.8L1 7.3l5.9-.5L10 2l2.1 4.8 5.9.5-5 4.9 1.5 5.8z"/>
+                        </svg>
+                        <span>600 points</span>
+                        <a href="#" class="text-xs text-black ml-2">View History</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-2 h-2 ml-1" viewBox="0 0 512 512">
+                            <path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM294.6 151.2c-4.2-4.6-10.1-7.2-16.4-7.2C266 144 256 154 256 166.3l0 41.7-96 0c-17.7 0-32 14.3-32 32l0 32c0 17.7 14.3 32 32 32l96 0 0 41.7c0 12.3 10 22.3 22.3 22.3c6.2 0 12.1-2.6 16.4-7.2l84-91c3.5-3.8 5.4-8.7 5.4-13.9s-1.9-10.1-5.4-13.9l-84-91z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full h-auto p-5 mt-6">
+                <ul>
+                    <li class="flex items-center justify-between py-2 border-b border-gray-200">
+                        <span class="flex items-center"><i class="fa fa-user mr-2"></i> Profile</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </li>
+                    <li class="flex items-center justify-between py-2 border-b border-gray-200">
+                        <span class="flex items-center"><i class="fa fa-star mr-2"></i> Points Collection</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </li>
+                    <li class="flex items-center justify-between py-2 border-b border-gray-200">
+                        <span class="flex items-center"><i class="fa fa-cog mr-2"></i> Settings</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </li>
+                    <li class="flex items-center justify-between py-2 border-b border-gray-200">
+                        <span class="flex items-center"><i class="fa fa-moon mr-2"></i> Dark mode</span>
+                        <div class="relative">
+                            <input type="checkbox" class="hidden" id="dark-mode-toggle">
+                            <label for="dark-mode-toggle" class="block w-10 h-6 bg-gray-300 rounded-full slider cursor-pointer">
+                                <div class="w-4 h-4 bg-white rounded-full shadow toggle-dot absolute left-1 top-1"></div>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="flex items-center justify-between py-2 border-b border-gray-200">
+                        <span class="flex items-center"><i class="fa fa-lock mr-2"></i> Change Password</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </li>
+                    <li class="flex items-center justify-between py-2 border-b border-gray-200">
+                        <span class="flex items-center"><i class="fa fa-comment-dots mr-2"></i> Review Website</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </li>
+                    <li class="flex items-center justify-between py-2">
+                        <span class="flex items-center"><i class="fa fa-sign-out-alt mr-2"></i> Logout</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

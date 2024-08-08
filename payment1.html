@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Navigator - Point History</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .custom-bg {
+            background-color: #C1C1EB;
+        }
+        .custom-bg1 {
+            background-color: #9696E8;
+            ;
+        }
+        .custom-tab-active {
+            border-bottom: 2px solid #C1C1EB;
+            padding-bottom: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-6">
+
+    <div class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-6 border-2 border-purple-400">
+
+        <div class="custom-bg rounded-lg py-4">
+            <div class="text-center text-black font-bold">Your Point</div>
+            <div class="flex justify-center items-center mt-2">
+                <svg class="w-4 h-4 text-red-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.5 3 1.5-5.8L1 7.3l5.9-.5L10 2l2.1 4.8 5.9.5-5 4.9 1.5 5.8z"/>
+                </svg>
+                <span class="inline-flex items-center bg-white rounded-full px-3 py-1 text-purple-600 font-semibold">
+                    
+                    600 Points
+                </span>
+            </div>
+            <div class="bg-black text-white text-sm mt-2 py-1 px-4 flex justify-between">
+                <span class="ml-10">Latest Update</span>
+                <span class="mr-10">5 March, 2023</span>
+            </div>
+        </div>
+        
+        <div class="mt-6">
+            <div class="flex justify-between items-center border-b pb-2 mb-4">
+                <div class="text-lg font-semibold">Point History</div>
+                <div class="text-sm text-white custom-bg1 py-1 px-2 rounded-lg">*12 results*</div>
+            </div>
+            
+        
+            <div class="container flex items-center justify-center">
+                <div class="flex justify-center space-x-8 mb-4 border p-2 border-gray-300">
+                    <button id="purchase-tab" class="font-semibold custom-tab text-purple-600 focus:outline-none" onclick="switchTab('purchase-tab')">
+                        Points Purchase History
+                    </button>
+                    <button id="use-tab" class="font-semibold text-black focus:outline-none" onclick="switchTab('use-tab')">
+                        Points Use History
+                    </button>
+                </div>
+            </div>
+            
+            <div class="border border-gray-800 rounded-lg p-4 mb-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex justify-between items-center ml-5">Today, 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-red-500 mr-1" viewBox="0 0 512 512">
+                            <path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/>
+                        </svg>04:32 PM</div>
+                    
+                    <div class="text-red-500 flex justify-center items-center mr-5"><svg class="w-4 h-4 text-red-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.5 3 1.5-5.8L1 7.3l5.9-.5L10 2l2.1 4.8 5.9.5-5 4.9 1.5 5.8z"/>
+                    </svg>-100</div>
+                </div>
+            </div>
+            <div class="border border-gray-800 rounded-lg p-4 mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <div class="flex justify-between items-center ml-5">1 May 2023,
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-red-500 mr-1" viewBox="0 0 512 512">
+                            <path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/>
+                        </svg>04:32 PM</div>
+                    <div class="text-green-500 flex justify-center items-center mr-5"><svg class="w-4 h-4 text-red-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.5 3 1.5-5.8L1 7.3l5.9-.5L10 2l2.1 4.8 5.9.5-5 4.9 1.5 5.8z"/></svg>+50</div>
+                </div>
+                <div class="text-gray-500 text-sm ml-5">Purchase 5000 kyats</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabId) {
+            
+            document.getElementById('purchase-tab').classList.remove('custom-tab-active');
+            document.getElementById('use-tab').classList.remove('custom-tab-active');
+            document.getElementById('purchase-tab').classList.remove('text-purple-600');
+            document.getElementById('use-tab').classList.remove('text-purple-600');
+
+            
+            document.getElementById(tabId).classList.add('custom-tab-active');
+            document.getElementById(tabId).classList.add('text-purple-600');
+        }
+
+        
+        switchTab('purchase-tab');
+    </script>
+
+</body>
+</html>

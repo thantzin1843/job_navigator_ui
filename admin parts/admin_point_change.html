@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Navigator</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend:{
+                    width: {
+                        'custom-xsm': '3rem',
+                        'custom-sm': '8rem', 
+                        'custom-md': '12rem', 
+                        'custom-lg': '16rem', 
+                        'custom-xl': '20rem', 
+                    },
+                    height: {
+                        'custom-xsm': '3rem',
+                        'custom-sm': '8rem', 
+                        'custom-md': '12rem', 
+                        'custom-lg': '16rem', 
+                        'custom-xl': '20rem', 
+                    },
+                    screens: {
+                        'sm': '640px',
+                        'md': '768px',
+                        'lg': '1024px',
+                        'xl': '1280px',
+                        '2xl': '1536px',
+                    },
+                },
+                fontFamily: {
+                    cabin: ['Cabin', 'sans-serif'],
+                },
+            }
+        }
+    </script>
+
+    <!-- Cabin font -->
+    <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+    <!-- Icons -->      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <style>
+        @media (max-width: 850px) {
+            .container {
+                min-width: 800px;
+            }
+        }
+        .hover-bg-opacity:hover {
+            background-color: rgba(193, 193, 235, 0.74); 
+            cursor: pointer;
+        }
+        .active {
+            background-color: rgba(193, 193, 235, 0.74); 
+            cursor: pointer;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .slider {
+            transition: transform 0.3s ease;
+            background-color: rgba(193, 193, 235, 0.74); 
+        }
+        .border-active {
+            border-color: #7905EE;
+        }
+        .custom-bg{
+            background-color: #7905EE;
+        }
+        .disabled-background {
+            pointer-events: none;
+            filter: blur(5px);
+        }
+        .custom-bg2{
+            background-color: #D9D9D9;
+        }
+    </style>
+</head>
+<body class="font-cabin bg-[#F6F3F3]">
+    
+
+    <div class="container max-w-screen-xl mx-auto p-2 h-screen" id="container">
+        <div class="w-full h-72 bg-[#9696E8] rounded relative"> 
+            <div class="w-full px-6 pt-6 absolute flex gap-3">
+                <!-- Nav Panel -->              
+                <div class="bg-[#FFFFFF] opacity-90 w-56 h-auto p-3 rounded-lg flex-col justify-center gap-2 shadow-md">
+                    <div class="flex items-center justify-center">
+                        <img src="../proj pic/no back/logo.png" class="w-32 h-20"> 
+                    </div>
+                    
+                    <div class="flex items-center justify-start p-2 mt-3 hover-bg-opacity rounded">
+                        <a href="#">
+                            <i class="fa-solid fa-house" style="color: #000000; font-size:15px;"></i>
+                            &nbsp; <span class="text-base font-normal">Dashboard</span>
+                        </a>
+                    </div>  
+                    
+                    <div class="flex items-center justify-start p-2 mt-3 hover-bg-opacity rounded">
+                        <a href="">
+                            <i class="fa-solid fa-users" style="color: #000000; font-size:15px;"></i>
+                            &nbsp; <span class="text-base font-normal">User Accounts</span>
+                        </a>
+                    </div>  
+
+                    <div class="flex items-center justify-start p-2 mt-3 hover-bg-opacity rounded">
+                        <a href="">
+                            <i class="fa-solid fa-comment" style="color: #000000; font-size:15px;"></i>
+                            &nbsp; <span class="text-base font-normal">View Reviews</span>
+                        </a>
+                    </div>  
+
+                    <div class="flex items-center justify-start p-2 mt-3 hover-bg-opacity active rounded">
+                        <a href="">
+                            <i class="fa-solid fa-money-check-dollar" style="color: #000000; font-size:15px;"></i>
+                            &nbsp; <span class="text-base font-normal">Check Payment</span>
+                        </a>
+                    </div>  
+
+                    <div class="flex items-center justify-start p-2 mt-3 hover-bg-opacity rounded">
+                        <a href="">
+                            <i class="fa-solid fa-star" style="color: #000000; font-size:15px;"></i>
+                            &nbsp; <span class="text-base font-normal">Manage Points</span>
+                        </a>
+                    </div>  
+
+                    <div class="mt-12 mb-3">
+                        <div class="flex items-center justify-start p-2 mt-3 hover-bg-opacity rounded">
+                            <a href="">
+                                <i class="fa-solid fa-user" style="color: #000000; font-size:15px;"></i>
+                                &nbsp; <span class="text-base font-normal">Profile</span>
+                            </a>
+                        </div> 
+
+                        <div class="flex items-center justify-start p-2 mt-3 hover-bg-opacity rounded">
+                            <a href="">
+                                <i class="fa-solid fa-arrow-right-from-bracket" style="color: #000000; font-size:15px;"></i>
+                                &nbsp; <span class="text-base font-normal">Logout</span>
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="w-11/12 mt-5 mx-3">
+                    <div class="flex flex-row justify-between flex-wrap"> 
+                        <div class="justify-self-start">
+                            &nbsp; <span class="text-xl font-bold text-white">Manage Points</span>
+                        </div>
+                        <div class="flex justify-end justify-self-end gap-3">
+                            <form>
+                                <input type="text" value="Search" class="rounded p-2">
+                            </form>
+                            <i class="fa-solid fa-bell" style="color: #ffffff; font-size:20px; margin-top:7px;" ></i>
+                            <img src="../proj pic/download.jpg" class="w-10 h-10 rounded-full">
+                        </div>                    
+                    </div>
+                    
+                    <!-- Point Change Section -->
+                    <div class="w-full mt-8 p-6 bg-white shadow-md rounded">
+                        <div class="flex justify-between items-center mb-6">
+                            <span>Total : 5 packages</span>
+                            <button class="custom-bg text-white px-4 py-2 rounded"  id="addbtn">+ Add Points</button>
+                        </div>
+                        <div class="flex items-center mb-6 custom-bg2 px-4 py-3 rounded-lg justify-center">
+                            <label for="points" class="mr-2">Points:</label>
+                            <input type="text" id="points" value="10" class="border border-gray-300 rounded p-2 mr-4">
+                            <label for="cost" class="mr-2">Cost:</label>
+                            <input type="text" id="cost" value="1000" class="border border-gray-300 rounded p-2 mr-4">
+                            <button class="custom-bg text-white px-4 py-2 rounded">Save</button>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex justify-between items-center border-2 border-active rounded-lg p-4">
+                                <span><i class="fa-solid fa-star text-red-500"></i> 10 Points</span>
+                                <span>1000 kyats</span>
+                                <button class=" px-2 py-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg></button>
+                            </div>
+                            <div class="flex justify-between items-center border-2 border-gray-300 rounded-lg p-4">
+                                <span><i class="fa-solid fa-star text-red-500"></i> 20 Points</span>
+                                <span>2000 kyats</span>
+                                <button class=" px-2 py-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg></button>
+                            </div>
+                            <div class="flex justify-between items-center border-2 border-gray-300 rounded-lg p-4">
+                                <span><i class="fa-solid fa-star text-red-500"></i> 30 Points</span>
+                                <span>3000 kyats</span>
+                                <button class=" px-2 py-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg></button>
+                            </div>
+                            <div class="flex justify-between items-center border-2 border-gray-300 rounded-lg p-4">
+                                <span><i class="fa-solid fa-star text-red-500"></i> 40 Points</span>
+                                <span>4000 kyats</span>
+                                <button class=" px-2 py-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg></button>
+                            </div>
+                            <div class="flex justify-between items-center border-2 border-gray-300 rounded-lg p-4">
+                                <span><i class="fa-solid fa-star text-red-500"></i> 50 Points</span>
+                                <span>5000 kyats</span>
+                                <button class=" px-2 py-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- add points -->
+    <div class="fixed inset-0 flex items-center justify-center w-full h-full hidden bg-black bg-opacity-50" id="AddBox">
+        <div class="bg-white w-1/3 p-6 rounded-lg shadow-lg">
+            <h2 class="text-lg font-semibold mb-4">Add Points</h2>
+            <input type="text" placeholder="Enter points" class="p-2 border border-gray-300 rounded w-full mb-4"/>
+            <input type="text" placeholder="Enter cost" class="p-2 border border-gray-300 rounded w-full mb-4"/>
+            <div class="flex justify-end">
+                <button class="bg-gray-300 text-black px-4 py-2 rounded mr-2" onclick="hideBox()">Cancel</button>
+                <button class="custom-bg text-white px-4 py-2 rounded" onclick="hideBox()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const addbtn = document.getElementById('addbtn');
+
+        addbtn.addEventListener("click", function(){
+            document.getElementById('AddBox').classList.toggle('hidden');
+            document.getElementById('container').classList.toggle('disabled-background'); 
+        });
+
+        function hideBox() {
+            document.getElementById('AddBox').classList.add('hidden');
+            document.getElementById('container').classList.remove('disabled-background');
+        }
+    </script>
+</body>
+</html>
