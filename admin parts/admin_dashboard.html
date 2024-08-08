@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Navigator</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+               extend:{
+                  width: {
+                  'custom-xsm': '3rem',
+                  'custom-sm': '8rem', 
+                  'custom-md': '12rem', 
+                  'custom-lg': '16rem', 
+                  'custom-xl': '20rem', 
+                  },
+                  height: {
+                  'custom-xsm': '3rem',
+                  'custom-sm': '8rem', 
+                  'custom-md': '12rem', 
+                  'custom-lg': '16rem', 
+                  'custom-xl': '20rem', 
+                  },
+                  screens: {
+                  'sm': '640px',
+                  'md': '768px',
+                  'lg': '1024px',
+                  'xl': '1280px',
+                  '2xl': '1536px',
+                  },
+                },
+               fontFamily: {
+                cabin: ['Cabin', 'sans-serif'],
+               },
+          }
+            
+        }
+    </script>
+    
+      </style>
+      
+      <!--cabin font-->
+      <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+      <!--icons-->      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+      <style>
+         @media (max-width: 850px){
+            .container{
+                min-width:800px;
+            }
+        }
+        .hover-bg-opacity:hover {
+            background-color: rgba(193, 193, 235, 0.74); 
+            cursor:pointer;
+        }
+        .active {
+            background-color: rgba(193, 193, 235, 0.74); 
+            cursor:pointer;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+      </style>
+</head>
+<body class="font-cabin bg-[#F6F3F3]">
+    <div class="container max-w-screen-xl mx-auto p-2 h-screen">
+        <div class="w-full h-72 bg-[#9696E8] rounded relative"> 
+            <div class="w-full px-6 pt-6 absolute flex gap-3">
+                <!-- nav panel -->              
+                <div class=" bg-[#FFFFFF] opacity-90 w-56 h-auto p-3 rounded-lg flex-col justify-center gap-2 shadow-md sticky">
+                      <div  class="flex items-center justify-center">
+                        <img src="../proj pic/no back/logo.png" class="w-32 h-20"> 
+                      </div>
+                      
+                      <div class="flex items-center justify-start p-2 mt-3 active rounded">
+                       <a href="#">
+                        <i class="fa-solid fa-house" style="color: #000000; font-size:15px;"></i>
+                        &nbsp; <span class="text-base font-normal">Dashboard</span>
+                       </a>
+                      </div>  
+                      
+                      <div class="flex items-center justify-start p-2 mt-3 hover-bg-opacity rounded">
+                        <a href="admin_userAccount.html">
+                        <i class="fa-solid fa-users" style="color: #000000; font-size:15px;"></i>
+                        &nbsp; <span class="text-base font-normal">User Accounts</span>
+                        </a>
+                      </div>  
+
+                      <div class="flex items-center justify-start p-2 mt-3 hover-bg-opacity rounded">
+                        <a href="admin_review.html">
+                        <i class="fa-solid fa-comment" style="color: #000000; font-size:15px;"></i>
+                        &nbsp; <span class="text-base font-normal">View Reviews</span>
+                        </a>
+                      </div>  
+
+                      <div class="flex items-center justify-start p-2 mt-3 hover-bg-opacity rounded">
+                        <a href="admin_payment.html">
+                            <i class="fa-solid fa-money-check-dollar " style="color: #000000; font-size:15px;"></i>
+                        &nbsp; <span class="text-base font-normal">Check Payment</span>
+                        </a>
+                      </div>  
+
+                      <div class="flex items-center justify-start p-2 mt-3 hover-bg-opacity rounded">
+                        <a href="admin_points.html">
+                        <i class="fa-solid fa-star" style="color: #000000; font-size:15px;"></i>
+                        &nbsp; <span class="text-base font-normal">Manage Points</span>
+                        </a>
+                      </div>  
+
+                      <div class="mt-12 mb-3">
+                         <div class="flex items-center justify-start p-2 mt-3 hover-bg-opacity rounded">
+                            <a href="admin_profile.html">
+                                <i class="fa-solid fa-money-check-dollar " style="color: #000000; font-size:15px;"></i>
+                            &nbsp; <span class="text-base font-normal">Profile</span>
+                            </a>
+                          </div> 
+
+                          <div class="flex items-center justify-start p-2 mt-3 hover-bg-opacity rounded">
+                            <a href="">
+                                <i class="fa-solid fa-user" style="color: #000000; font-size:15px;"></i>
+                            &nbsp; <span class="text-base font-normal">Logout</span>
+                            </a>
+                          </div> 
+                      </div>
+                </div>
+
+                <!-- content -->
+                <div class="w-11/12 mt-5 mx-3">
+                    <div class="flex flex-row justify-between"> 
+                        <div class="justify-self-start">
+                            <i class="fa-solid fa-house" style="color: #ffffff; font-size:20px;"></i>
+                            &nbsp; <span class="text-xl font-bold text-white">Dashboard</span>
+                        </div>
+                        <div class="flex justify-end justify-self-end gap-3">
+                            <form>
+                                <input type="text" value="Search" class="rounded p-2">
+                            </form>
+                            <i class="fa-solid fa-bell" style="color: #ffffff; font-size:20px; margin-top:7px;" ></i>
+                            <img src="../proj pic/download.jpg" class="w-10 h-10 rounded-full">
+                        </div>                    
+                    </div>
+
+                    <div class="w-full flex flex-row justify-center gap-5 mt-5">
+                        <div class="w-fit h-auto p-3 rounded bg-white shadow-md flex flex-row flex-wrap">
+                            <div class="flex flex-col flex-wrap w-1/2">
+                                <h3 class="font-bold text-[#858181] text-base">Registered Job Seekers</h3>
+                                <h4 class="font-bold text-[#7905EE] text-base">5000</h4>
+                            </div>
+                            <div class="w-1/2 flex justify-center">
+                                <img src="../proj pic/no back/total_js.png" class="w-14 h-14">
+                            </div>
+                        </div>
+
+                        <div class="w-fit h-auto p-3 rounded bg-white shadow-md flex flex-row flex-wrap">
+                            <div class="flex flex-col flex-wrap w-1/2">
+                                <h3 class="font-bold text-[#858181] text-base">Researchabel Posts</h3>
+                                <h4 class="font-bold text-[#7905EE] text-base">5000</h4>
+                            </div>
+                            <div class="w-1/2 flex justify-center">
+                                <img src="../proj pic/no back/total_post.png" class="w-14 h-14">
+                            </div>
+                        </div>
+                        
+                        <div class="w-fit h-auto p-3 rounded bg-white shadow-md flex flex-row flex-wrap">
+                            <div class="flex flex-col flex-wrap w-1/2">
+                                <h3 class="font-bold text-[#858181] text-base">Registered Companies</h3>
+                                <h4 class="font-bold text-[#7905EE] text-base">5000</h4>
+                            </div>
+                            <div class="w-1/2 flex justify-center">
+                                <img src="../proj pic/no back/total_company.png" class="w-14 h-14">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="hide-scrollbar h-96 flex flex-row flex-wrap gap-7 mt-5">
+                        <div class="w-fit h-fit p-8 rounded-lg shadow-xl bg-white">
+                            <h2 class="font-bold text-[#7905EE] text-base">Points Purchasing Report</h2>
+                            <img src="../proj pic/pie.png" class="w-80 h-52">
+                        </div>
+
+                        <div class="flex flex-col gap-4 w-full md:w-1/2 h-fit rounded-md border border-gray-300 p-5 bg-white p-3">
+                            
+                            <div class="">
+                                <h2 class="text-lg font-bold text-purple-700">Website Visitors</h2>
+                                <select id="options" name="options" class="float-right block w-fit p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-blue-500">
+                                    <option value="daily">Daily</option>
+                                    <option value="monthly">Monthly</option>
+                                </select>                                
+                            </div>
+                            <div class="flex flex-col gap-2 w-full">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium text-gray-600">Monday</span>
+                                    <div class="flex flex-1 gap-2">
+                                        <div class="flex items-center gap-2 w-full bg-purple-200 rounded-md p-1">
+                                            <div class="bg-purple-500 rounded-md h-4 w-2/3"></div>
+                                        </div>
+                                        <div class="text-sm font-bold text-gray-600">250</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium text-gray-600">Tuesday</span>
+                                    <div class="flex flex-1 gap-2">
+                                        <div class="flex items-center gap-2 w-full bg-purple-200 rounded-md p-1">
+                                            <div class="bg-purple-500 rounded-md h-4 w-4/5"></div>
+                                        </div>
+                                        <div class="text-sm font-bold text-gray-600">412</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium text-gray-600">Wednesday</span>
+                                    <div class="flex flex-1 gap-2">
+                                        <div class="flex items-center gap-2 w-full bg-purple-200 rounded-md p-1">
+                                            <div class="bg-purple-500 rounded-md h-4 w-3/4"></div>
+                                        </div>
+                                        <div class="text-sm font-bold text-gray-600">385</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium text-gray-600">Thursday</span>
+                                    <div class="flex flex-1 gap-2">
+                                        <div class="flex items-center gap-2 w-full bg-purple-200 rounded-md p-1">
+                                            <div class="bg-purple-500 rounded-md h-4 w-3/5"></div>
+                                        </div>
+                                        <div class="text-sm font-bold text-gray-600">285</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-medium text-gray-600">Friday</span>
+                                    <div class="flex flex-1 gap-2">
+                                        <div class="flex items-center gap-2 w-full bg-purple-200 rounded-md p-1">
+                                            <div class="bg-purple-500 rounded-md h-4 w-2/5"></div>
+                                        </div>
+                                        <div class="text-sm font-bold text-gray-600">225</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-1/3 h-fit p-8 rounded-lg shadow-xl bg-white">
+                            <h2 class="font-bold text-[#7905EE] text-base">Website's Reviews</h2>
+                            <div class="mt-3 flex flex-col flex-nowrap justify-center text-center">
+                                <h2 class="font-bold text-5xl ">3.0</h2>
+                                <p class="font-medium text-base text-gray-500">(12,000 reviews)</p>
+                            </div>
+                            <div class="flex flex-row flex-nowrap justify-center">                                
+                                <i class="fa-solid fa-star" style="color: #f0dc00;"></i>
+                                <i class="fa-solid fa-star" style="color: #f0dc00;"></i>
+                                <i class="fa-solid fa-star" style="color: #f0dc00;"></i>
+                                <i class="fa-solid fa-star" style="color: #8a8a8a;"></i>
+                                <i class="fa-solid fa-star" style="color: #8a8a8a;"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+
+                </div>
+            </div>
+
+             
+        </div>
+        
+    </div>
+    
+</body>
+</html>
